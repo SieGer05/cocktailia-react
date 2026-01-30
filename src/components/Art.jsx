@@ -13,9 +13,10 @@ function Art() {
          scrollTrigger: {
             trigger: '#art',
             start,
-            end: 'bottom center',
-            scrub: 1.5,
-            pin: true
+            end: '+=3000', 
+            scrub: 2.5,    
+            pin: true,
+            anticipatePin: 1
          }
       });
 
@@ -26,7 +27,7 @@ function Art() {
             ease: 'power1.inOut',
          })
          .to('.masked-img', {
-            scale: 1.3,
+            scale: 1.3,       
             maskPosition: 'center',
             maskSize: '400%',
             duration: 1,
@@ -56,7 +57,7 @@ function Art() {
                <div className="cocktail-img">
                   <img 
                      src="/images/under-img.jpg" 
-                     alt="cocktai"
+                     alt="cocktail"
                      className="abs-center masked-img size-full object-contain" />
                </div>
 
@@ -82,4 +83,4 @@ function Art() {
    );
 }
 
-export default Art
+export default Art;
