@@ -47,7 +47,7 @@ const Hero = () => {
          })
          .to(".right-leaf", { y: 200 }, 0)
          .to(".left-leaf", { y: -200 }, 0)
-         .to(".arrow", { y: 100 }, 0);
+         .to(".arrow", { y: 50, opacity: 0 }, 0); 
       
       const startValue = isMobile ? "top 50%" : "center 60%";
       const endValue = isMobile ? "120% top" : "bottom top";
@@ -63,15 +63,15 @@ const Hero = () => {
       });
       
       videoRef.current.onloadedmetadata = () => {
-      tl.to(videoRef.current, {
-         currentTime: videoRef.current.duration,
-      });
+         tl.to(videoRef.current, {
+            currentTime: videoRef.current.duration,
+         });
       };
    }, []);
    
    return (
       <>
-      <section id="hero" className="noisy">
+      <section id="hero" className="noisy relative">
          <h1 className="title">MOJITO</h1>
          
          <img
@@ -83,6 +83,12 @@ const Hero = () => {
             src="/images/hero-right-leaf.png"
             alt="right-leaf"
             className="right-leaf"
+         />
+
+         <img 
+            src="/images/arrow.png" 
+            alt="Scroll Down" 
+            className="arrow absolute bottom-80 right-35 hidden md:block" 
          />
          
          <div className="body">
