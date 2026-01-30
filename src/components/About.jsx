@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 function About() {
    useGSAP(() => {
@@ -43,10 +44,18 @@ function About() {
                   </h2>
                </div>
 
-               <div className="sub-content">
+               <div className="sub-content items-start">
                   <p>
                      Every cocktail we serve is a reflection of our obsession with detail — from the first muddle to the final garnish. That care is what turns a simple drink into something truly memorable.
                   </p>
+
+                  <div className="flex flex-row items-center gap-1 text-white text-xl">
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStarHalfAlt />
+                     </div>
 
                   <div>
                      <p className="md:text-3xl text-xl font-bold">
